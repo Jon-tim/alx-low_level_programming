@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * Program that returns prints out a sentence
+ * main - Program that returns prints out a sentence
  * Function should use puts
- * Program should end with the value 0
+ * Return: should end with the value 0
  */
 int main(void)
 {
