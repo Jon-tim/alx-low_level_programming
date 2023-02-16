@@ -1,8 +1,10 @@
 #include <stdio.h>
 /**
- * main - print a sentence 
+ * main - entry point
  *
- * Return: 0
+ * Description: print a sentence
+ *
+ * Return: value to be returned shuld be 0
  */
 int main(void)
 {
