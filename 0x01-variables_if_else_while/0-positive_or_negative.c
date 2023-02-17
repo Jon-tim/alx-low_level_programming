@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 /*
-* main - starting point
+* main - Positive or Negatiive
 *
-* Description : check if a is either greater than, less than or equal to 0 
+* Description: Check if a number is greater than, less than or equal to 0 
 *
 * Return: always return 0
 */
