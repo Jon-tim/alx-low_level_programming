@@ -19,7 +19,7 @@ int main(void)
 	{
 		/* if the number is greater than 0: is positive */
 		printf(" %d is positive\n", n);
-	} else if (n = 0)
+	} else if (n == 0)
 	{
 		/* if the number is 0: is zero */
 		printf(" %d is zero\n", n);
