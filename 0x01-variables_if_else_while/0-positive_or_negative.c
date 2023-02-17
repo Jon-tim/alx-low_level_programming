@@ -2,9 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 /*
-* main - Positive or Negatiive
-*
-* Description: Check if a number is greater than, less than or equal to 0 
+* main - Check if a number is Positive or Negatiive 
 *
 * Return: always return 0
 */
