@@ -6,8 +6,8 @@
 int main(void)
 {
 	char small_letters = 'a';
-	while (small_letters <= 'z')
 
+	while (small_letters <= 'z')
 	{
 		putchar(small_letters);
 		small_letters++;
