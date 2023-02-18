@@ -12,8 +12,8 @@ int main(void)
 	{
 		for (num2 = 0; num2 < 9; num2++)
 		{
-			if (num1 < num2)
-			{
+			/*if (num1 < num2)*/
+			/*{*/
 				putchar(num1 + '0');
 				putchar(num1 + '0');
 				putchar(' ');
@@ -25,7 +25,7 @@ int main(void)
 				}
 				putchar(',');
 				putchar(' ');
-			}
+			/*}*/
 		}
 	}
 	putchar('\n');
