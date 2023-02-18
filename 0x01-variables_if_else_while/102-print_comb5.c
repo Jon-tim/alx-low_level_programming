@@ -16,6 +16,7 @@ int main(void)
 			int n2 = i + '0';
 			int n3 = j + '0';
 			int n4 = j + '0';
+
 			putchar(n1 + '0');
 			putchar(n2 + '0');
 			putchar(' ');
