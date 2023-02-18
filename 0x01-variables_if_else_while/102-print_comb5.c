@@ -6,31 +6,25 @@
 
 int main(void)
 {
-	int num1, num2, num3, num4;
+	int i, j;
 
-	for (num1 = 0; num1 < 10; num1++)
-	{
-		for (num2 = 0; num2 < 10; num2++)
-		{
-			for (num3 = 0; num3 < 10; num3++)
-			{
-				for (num4 = 0; num3 < 10; num4++)
-				{
-					putchar(num1 + '0');
-					putchar(num2 + '0');
-					putchar(' ');
-					putchar(num3 + '0');
-					putchar(num4 + '0');
-					if (num1 == 9 && num2 == 8 && num3 == 9 && num4 == 8)
-					{
-						continue;
-					}
-						putchar(',');
-						putchar(' ');
-				}
-			}
-		}
-	}
+	for (i = 0; i <= 99; i++) {
+        for (j = i; j <= 99; j++) {
+            int n1 = i / 10;
+            int n2 = i % 10;
+            int n3 = j / 10;
+            int n4 = j % 10;
+            putchar(n1 + '0');
+            putchar(n2 + '0');
+            putchar(' ');
+            putchar(n3 + '0');
+            putchar(n4 + '0');
+            if (i != 99 || j != 99) {
+                putchar(',');
+                putchar(' ');
+            }
+        }
+    }
 	putchar('\n');
 	return (0);
 }
