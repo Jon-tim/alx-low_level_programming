@@ -6,12 +6,11 @@
 
 int main(void)
 {
-	int _num = 0;
+	int i;
 
-	while (_num < 10)
+	for (i = 0; i < 10; i++)
 	{
-		putchar(_num);
-		_num++;
+		putchar((i % 10)+ '0');
 	}
 	putchar('\n');
 	return (0);
