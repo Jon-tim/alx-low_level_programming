@@ -12,20 +12,18 @@ int main(void)
 	{
 		for (j = i; j <= 99; j++)
 		{
-			int n1 = i + '0';
-			int n2 = i + '0';
-			int n3 = j + '0';
-			int n4 = j + '0';
-
-			putchar(n1 + '0');
-			putchar(n2 + '0');
-			putchar(' ');
-			putchar(n3 + '0');
-			putchar(n4 + '0');
-			if (i != 98 || j != 99)
+			if (i < j)
 			{
-				putchar(',');
+				putchar(i / 10 + '0');
+				putchar(i % 10 + '0');
 				putchar(' ');
+				putchar(j / 10 + '0');
+				putchar(j % 10 + '0');
+				if (i != 98 || j != 99)
+				{
+					putchar(',');
+					putchar('\n');
+				}
 			}
 		}
 	}
