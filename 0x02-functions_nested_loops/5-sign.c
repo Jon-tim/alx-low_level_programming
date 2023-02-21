@@ -2,6 +2,7 @@
 
 /**
  * print_sign - starting point
+ * @n: number to be checked
  * Return: always either 1, 0 or -1
  */
 
