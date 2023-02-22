@@ -8,7 +8,7 @@ void print_times_table(int n)
 {
 	int a, b, multi;
 
-	if (n > 0 && n < 15)
+	if (n >= 0 && n <= 15)
 	{
 		for (a = 0; a <= n; a++)
 		{
@@ -21,10 +21,12 @@ void print_times_table(int n)
 				if (multi <= 9)
 				{
 					_putchar(32);
+					_putchar(32);
 					_putchar(multi + 48);
 				}
 				else
 				{
+					_putchar(32);
 					_putchar(multi / 10 + 48);
 					_putchar(multi % 10 + 48);
 				}
