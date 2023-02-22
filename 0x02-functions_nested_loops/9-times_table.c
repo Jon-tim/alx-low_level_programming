@@ -21,12 +21,13 @@ void times_table(void)
 			}
 			else if (multi == 0)
 			{
+				_putchar(' ');
 				_putchar(multi / 10 + 48);
 				_putchar(',');
-				_putchar(' ');
 			}
 			else
 			{
+				_putchar(' ');
 				_putchar(multi / 10 + 48);
 				_putchar(multi % 10 + 48);
 				_putchar(',');
