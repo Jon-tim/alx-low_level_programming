@@ -13,9 +13,21 @@ void times_table(void)
 		for (b = 0; b <= 9; b++)
 		{
 			multi = a * b;
-			_putchar(multi / 10 + 48);
-			_putchar(multi % 10 + 48);
-			_putchar(',');
+			if (multi <= 9 && multi != 0)
+			{
+				_putchar(' ');
+				_putchar(multi / 10 + 48);
+			}
+			else if (multi == 0)
+			{
+				_putchar(multi % 10 + 48);
+			}
+			else
+			{
+				_putchar(multi / 10 + 48);
+				_putchar(multi % 10 + 48);
+				_putchar(',');
+			}
 			_putchar(' ');
 
 		}
