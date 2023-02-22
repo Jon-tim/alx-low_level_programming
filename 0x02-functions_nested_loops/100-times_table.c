@@ -24,11 +24,17 @@ void print_times_table(int n)
 					_putchar(32);
 					_putchar(multi + 48);
 				}
-				else
+				else if (multi <= 99)
 				{
 					_putchar(32);
 					_putchar(multi / 10 + 48);
 					_putchar(multi % 10 + 48);
+				}
+				else
+				{
+					_putchar(((multi / 100) % 10) + 48);
+					_putchar(((multi / 10) % 10) + 48);
+					_putchar((multi % 10) + 48);
 				}
 			}
 			_putchar('\n');
