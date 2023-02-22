@@ -13,7 +13,7 @@ void print_to_98(int n)
 	{
 		for (i = n; i >= 98; i--)
 		{
-			_pucthar(n / 10 + 48);
+			_putchar(n / 10 + 48);
 			_putchar(',');
 			_putchar(' ');
 		}
