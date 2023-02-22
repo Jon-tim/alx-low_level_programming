@@ -2,12 +2,13 @@
 /**
  * print_last_digit - starting point
  * @n: number to be checked
- * Result: return the last  digit
+ * Return: return the last  digit
  */
 
 int print_last_digit(int n)
 {
 	int i;
+
 	i = n % 10;
 	if (i < 0)
 	{
@@ -19,5 +20,4 @@ int print_last_digit(int n)
 		_putchar(i + 48);
 		return (i);
 	}
-	return (i);
 }
