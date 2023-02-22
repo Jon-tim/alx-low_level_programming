@@ -1,29 +1,13 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 /**
-* positive_or_negative - Check if a number is Positive or Negatiive
-* @i: number to be checked
+* main - Check if a number is Positive or Negatiive
 * Return: always return 0
 */
-void positive_or_negative(int i)
+int main(void)
 {
-	srand(time(0));
-	i = rand() - RAND_MAX / 2;
-	/* your code goes there */
-	if (i > 0)
-	{
-		/* if the number is greater than 0: is positive */
-		printf("%d is positive\n", i);
-	} else if (i == 0)
-	{
-		/* if the number is 0: is zero */
-		printf("%d is zero\n", i);
-	} else
-	{
-		/* if the number is less than 0: is negative */
-		printf("%d is negative\n", i);
-	}
+	int i = 0;
+	
+	positive_or_negative(i);
+
 	return (0);
 }
