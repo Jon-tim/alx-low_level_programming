@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * _abs - starting point
- * @n: number to be checked 
- * Return: return whatever's stipulated 
+ * @n: number to be checked
+ * Return: return whatever's stipulated
  */
 
 int _abs(int n)
