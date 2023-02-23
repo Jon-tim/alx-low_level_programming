@@ -2,7 +2,7 @@
 /**
  * main - fizzbuzz
  *
- * Return - digit, fizz, buzz or fizzbuzz
+ * Return: digit, fizz, buzz or fizzbuzz
  */
 
 int main(void)
@@ -22,6 +22,10 @@ int main(void)
 		else if (i % 5 == 0)
 		{
 			printf("Buzz ");
+		}
+		else
+		{
+			printf("%d ", i);
 		}
 	}
 }
