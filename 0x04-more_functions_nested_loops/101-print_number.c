@@ -6,7 +6,7 @@
  * Return: integer
  */
 
-int print_number(int n)
+void print_number(int n)
 {
 	_putchar(n);
 }
