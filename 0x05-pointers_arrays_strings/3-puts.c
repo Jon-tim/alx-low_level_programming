@@ -11,9 +11,9 @@ void _puts(char *str)
 {
 	if (strlen(str) != 0)
 	{
-		long int count;
+		int count;
 
-		for (count = 0; count <= strlen(str); count++)
+		for (count = 0; str[count] != '\0'; count++)
 		{
 			_putchar(str[count]);
 		}
