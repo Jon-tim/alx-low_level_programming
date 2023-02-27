@@ -10,7 +10,7 @@
 
 void print_rev(char *s)
 {
-	if (strlen(s) > 0)
+	if (strlen(s) != 0)
 	{
 		int count;
 
