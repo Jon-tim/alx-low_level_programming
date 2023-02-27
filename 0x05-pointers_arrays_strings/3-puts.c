@@ -11,7 +11,7 @@ void _puts(char *str)
 {
 	if (strlen(str) != 0)
 	{
-		int count;
+		long int count;
 
 		for (count = 0; count <= strlen(str); count++)
 		{
