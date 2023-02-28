@@ -9,16 +9,11 @@
 
 void rev_string(char *s)
 {
-	int count, index;
-
-	while (s[index] != '\0')
-		index++;
-	
-	if (index > 0)
+	int len = strlen(str);
+	for (int i = len - 1; i >= 0; i--)
 	{
-		for (count = index - 1; count >= 0; count--)
-			_putchar(s[count]);
+		char temp = str[i];
+		str[i] = str[len - i - 1];
+		str[len - i - 1] = temp;
 	}
-	else
-		_putchar('\n');
 }
