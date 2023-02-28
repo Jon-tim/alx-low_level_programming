@@ -22,6 +22,6 @@ void print_rev(char *s)
 	}
 	else
 	{
-		break;
+		_putchar('\n');
 	}
 }
