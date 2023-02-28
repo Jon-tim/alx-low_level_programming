@@ -9,7 +9,7 @@
  */
 int _strlen(char *s)
 {
-	int length_of_str;
+	int length_of_str = 0;
 
 	while (s[length_of_str] != 0)
 		length_of_str++;
