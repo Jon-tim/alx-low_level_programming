@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 /**
  * _puts - Print a string
  *
@@ -9,17 +8,12 @@
  */
 void _puts(char *str)
 {
-	if (strlen(str) != 0)
+	int count;
+
+	for (count = 0; str[count] != '\0'; count++)
 	{
-		int count;
-
-		for (count = 0; str[count] != '\0'; count++)
-		{
-			_putchar(str[count]);
-		}
-
-		_putchar('\n');
+		_putchar(str[count]);
 	}
-	else
-		_putchar('\n');
+
+	_putchar('\n');
 }
