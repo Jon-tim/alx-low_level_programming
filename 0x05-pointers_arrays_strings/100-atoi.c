@@ -9,16 +9,20 @@
 
 int _atoi(char *s)
 {
-	int count = 0, hold;
+	int sign = 1;
+	unsigned int num = 0;
 
-	for (count = 0; s[count] != '\0'; count++)
-	{
-		if (s[count] >= 30 && s[count] <= 39 || s[count] == '+' || s[count] == '-')
-		{
-			hold = s[count];
-		}
-		else
+	do {
+		if (*s == '-')
+			sign *= -1;
+
+		else if (*s >= '0' && *s <= '9')
+			num = (num * 10) + (*s - '0');
+
+		else if (num > 0)
 			break;
-	}
-	return (hold);
+
+	} while (*s++);
+
+	return (num * sign);
 }
