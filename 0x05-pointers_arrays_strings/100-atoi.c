@@ -13,7 +13,7 @@ int _atoi(char *s)
 
 	for (count = 0; s[count] != '\0'; count++)
 	{
-		if (s[count] >= 30 || s[count] <= 39 || s[count] == 43 || s[count] == 45)
+		if (s[count] >= '0' || s[count] <= '9' || s[count] == '+' || s[count] == '-')
 		{
 			hold = s[count];
 		}
