@@ -9,13 +9,14 @@
 
 int _atoi(char *s)
 {
-	int count = 0;
+	int count = 0, hold;
 
 	for (count = 0; s[count] != '\0'; count++)
 	{
 		if (s[count] >= 30 || s[count] <= 39 || s[count] == 43 || s[count] == 45)
 		{
-			_putchar(s[count]);
+			hold = s[count];
 		}
 	}
+	return (hold);
 }
