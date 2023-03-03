@@ -12,19 +12,19 @@ char *leet(char *str)
 	{
 		if (str[i] == 'e' || str[i] == 'E')
 		{
-			str[i] = '3';
+			str[i] = 51;
 		}
 		else if (str[i] == 'o' || str[i] == 'O')
 		{
-			str[i] = '0';
+			str[i] = 48;
 		}
 		else if (str[i] == 't' || str[i] == 'T')
 		{
-			str[i] = '7';
+			str[i] = 55;
 		}
 		else if (str[i] == 'l' || str[i] == 'L')
 		{
-			str[i] = '1';
+			str[i] = 49;
 		}
 		else
 		{
