@@ -6,36 +6,38 @@
  */
 char *leet(char *str)
 {
-	int i;
+	int i, len = 0;
 
-	for (i = 0; str[i] != '\0'; i++)
+	while (str[len] != '\0')
 	{
-		if (str[i] == 'e' || str[i] == 'E')
+		for (i = 0; str[i] != '\0'; i++)
 		{
-			str[i] = '3';
+			if (str[i] == 'e' || str[i] == 'E')
+			{
+				str[i] = 51;
+			}
+			else if (str[i] == 'a' || str[i] == 'A')
+			{
+				str[i] = 52;
+			}
+			else if (str[i] == 'o' || str[i] == 'O')
+			{
+				str[i] = 48;
+			}
+			else if (str[i] == 't' || str[i] == 'T')
+			{
+				str[i] = 55;
+			}
+			else if (str[i] == 'l' || str[i] == 'L')
+			{
+				str[i] = 49;
+			}
+			else
+			{
+				str[i] = str[i];
+			}
 		}
-		else if (str[i] == 'a' || str[i] == 'A')
-		{
-			str[i] = '4';
-		}
-		else if (str[i] == 'o' || str[i] == 'O')
-		{
-			str[i] = '0';
-		}
-		else if (str[i] == 't' || str[i] == 'T')
-		{
-			str[i] = '7';
-		}
-		else if (str[i] == 'l' || str[i] == 'L')
-		{
-			str[i] = '1';
-		}
-		else
-		{
-			str[i] = str[i];
-		}
+		len++;
 	}
-	str[i] = '\0';
-	
 	return (str);
 }
