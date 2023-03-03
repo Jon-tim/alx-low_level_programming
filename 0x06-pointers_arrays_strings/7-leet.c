@@ -6,38 +6,37 @@
  */
 char *leet(char *str)
 {
-	int i, len = 0;
+	int i, j;
 
-	while (str[len] != '\0')
+	for (j = 0; str[j] != '\0', j++)
 	{
 		for (i = 0; str[i] != '\0'; i++)
 		{
 			if (str[i] == 'e' || str[i] == 'E')
 			{
-				str[i] = 51;
+				str[j] = 51;
 			}
 			else if (str[i] == 'a' || str[i] == 'A')
 			{
-				str[i] = 52;
+				str[j] = 52;
 			}
 			else if (str[i] == 'o' || str[i] == 'O')
 			{
-				str[i] = 48;
+				str[j] = 48;
 			}
 			else if (str[i] == 't' || str[i] == 'T')
 			{
-				str[i] = 55;
+				str[j] = 55;
 			}
 			else if (str[i] == 'l' || str[i] == 'L')
 			{
-				str[i] = 49;
+				str[j] = 49;
 			}
 			else
 			{
-				str[i] = str[i];
+				str[i] = str[j];
 			}
 		}
-		len++;
 	}
 	return (str);
 }
