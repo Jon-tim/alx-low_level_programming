@@ -3,7 +3,7 @@
  * _strcmp - compare two string
  * @s1: first string
  * @s2: second string
- * Return: 15, -15 or 0
+ * Return: either 15, -15 or 0
  */
 
 int _strcmp(char *s1, char *s2)
