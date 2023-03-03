@@ -31,5 +31,7 @@ char *leet(char *str)
 			str[i] = str[i];
 		}
 	}
+	str[i] = '\0';
+	
 	return (str);
 }
