@@ -8,10 +8,14 @@
 char *_strstr(char *haystack, char *needle)
 {
 	int i, j;
-	int haystack_len = strlen(haystack);
-	int needle_len = strlen(needle);
+	int hay_len = 0;
+	int needle_len = 0;
 
-	for (i = 0; i <= haystack_len - needle_len; i++)
+	while (needle[needle_len] != '\0')
+		needle_len++;
+	while (haystack[hay_len] != '\0')
+		hay_len++;
+	for (i = 0; i <= hay_len - needle_len; i++)
 	{
 		for (j = 0; j < needle_len; j++)
 		{
