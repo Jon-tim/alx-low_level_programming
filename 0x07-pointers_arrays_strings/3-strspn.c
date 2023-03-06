@@ -15,7 +15,6 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		accept_len++;
 	}
-	
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		for (j = 0; j < accept_len; j++)
@@ -28,8 +27,8 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		if (j == accept_len)
 		{
-			return length;
+			return (length);
 		}
 	}
-	return length;
+	return (length);
 }
