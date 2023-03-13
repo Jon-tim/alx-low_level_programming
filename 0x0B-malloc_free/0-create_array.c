@@ -4,7 +4,7 @@
  * create_array - create an array of characters
  * @size: size of array to be created
  * @c: character which array is to be initialized with
- * Return: NULL is size is void; returns a pointer to the array or NULL if it fails
+ * Return: NULL is size is void; a pointer to the array or NULL if it fails
  */
 char *create_array(unsigned int size, char c)
 {
