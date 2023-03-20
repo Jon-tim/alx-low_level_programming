@@ -1,5 +1,5 @@
-#ifndef __SUM(x, y)__
-#define __SUM(x, y)__
+#ifndef _SUM(x, y)_
+#define _SUM(x, y)_
 
 #define SUM(x, y)((x) + (y))
 
