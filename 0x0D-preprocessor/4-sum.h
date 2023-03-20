@@ -1,6 +1,6 @@
-#ifndef __SUM__
-#define __SUM__
+#ifndef __SUM(x, y)__
+#define __SUM(x, y)__
 
-#define SUM(x, y)((a) + (y))
+#define SUM(x, y)((x) + (y))
 
 #endif
