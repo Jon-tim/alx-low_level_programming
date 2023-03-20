@@ -1,5 +1,5 @@
-#ifndef _ABS(x)_
-#define _ABS(x)_
+#ifndef _MACRO_FUNCTION_
+#define _MACRO_FUNCTION_
 
 #define ABS(x) ((x) < (0) ? (x) * (-1) : (x))
 
