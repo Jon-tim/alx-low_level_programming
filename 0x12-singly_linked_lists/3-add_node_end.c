@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
  * add_node_end - function that adds a new node at the end of a list_t list
- * @head: head
+ * @head: head of the linked list
  * @str: str to be duplicated
  * Return: address of the new element or NULL
  */
@@ -24,5 +24,17 @@ list_t *add_node_end(list_t **head, const char *str)
 	new_node->len = i;
 	new_node->next = *head;
 	*head = new_node;
+
+	if (new_node == NULL)
+	{
+		*head = new_node;
+	}
+	else
+	{
+		while (new_node->next != NULL)
+			new_node = new_node->next;
+		new_node->next = new_node;
+	}
+
 	return (new_node);
 }
