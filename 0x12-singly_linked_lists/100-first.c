@@ -1,4 +1,4 @@
-#include <stdio>
+#include <stdio.h>
 /**
  * before_main - calls function before main
  * Return: 0
