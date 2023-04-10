@@ -55,13 +55,13 @@ int main(int argc, char *argv[])
 		write_to = write(file_to, buffer, read_from);
 		if (write_to == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: 98 Can't write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 	}
 	if (file_to == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: 99 Can't write to %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 	return (0);
