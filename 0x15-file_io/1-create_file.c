@@ -1,15 +1,15 @@
 #include "main.h"
 /**
- * create_file - function create a file
+ * creatIe_file - function create a file
  * @filename: filename
  * @text_content: content to add
  * Return: 1 on success, -1 on failure
  */
 int create_file(const char *filename, char *text_content)
 {
-	int iterator = 0;
+	int iterator = 0, write_fn;
 
-	int fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	int fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 
 	if (fd == -1)
 	{
@@ -24,7 +24,7 @@ int create_file(const char *filename, char *text_content)
 		iterator++;
 	}
 
-	int write_fn = write(fd, text_content, iterator);
+	write_fn = write(fd, text_content, iterator);
 
 	if (write_fn == -1)
 	{
