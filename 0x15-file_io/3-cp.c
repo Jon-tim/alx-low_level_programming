@@ -1,6 +1,25 @@
 #include "main.h"
 /**
- * error_checks - check error
+ * error_close - check closing errors
+ * @err_to: file to copy into
+ * @err_from: file to copy from
+ * Return: nothing
+ */
+void error_close(int err_to, int err_from)
+{
+	if (err_to == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", err_to);
+		exit(100);
+	}
+	if (err_from == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", err_from);
+		exit(100);
+	}
+}
+/**
+ * error_checks - check opening errors
  * @file_to: file to copy into
  * @file_from: file to copy from
  * @argv: argument vector
@@ -10,13 +29,13 @@ void error_checks(int file_to, int file_from, char *argv[])
 {
 	if (file_to == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", argv[1]);
-		exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
 	}
 	if (file_from == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", argv[2]);
-		exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", argv[1]);
+		exit(98);
 	}
 }
 /**
@@ -38,31 +57,27 @@ int main(int argc, char *argv[])
 	}
 	file_from = open(argv[1], O_RDONLY);
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
-	if (file_from == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", argv[1]);
-		exit(98);
-	}
+	error_checks(file_to, file_from, argv);
 	read_from = 1024;
 	while (read_from == 1024)
 	{
 		read_from = read(file_from, buffer, 1024);
 		if (read_from == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from %s\n", argv[1]);
-			exit(98);
+			error_checks(file_to, file_from, argv);
 		}
 		write_to = write(file_to, buffer, read_from);
 		if (write_to == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			exit(99);
+			error_checks(file_to, file_from, argv);
 		}
 	}
 	if (file_to == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
+		error_checks(file_to, file_from, argv);
 	}
+	err_from = close(file_from);
+	err_to = close(file_to);
+	error_close(err_to, err_from);
 	return (0);
 }
