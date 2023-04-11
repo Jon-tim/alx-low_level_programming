@@ -72,10 +72,6 @@ int main(int argc, char *argv[])
 			error_checks(file_to, file_from, argv);
 		}
 	}
-	if (file_to == -1)
-	{
-		error_checks(file_to, file_from, argv);
-	}
 	err_from = close(file_from);
 	err_to = close(file_to);
 	error_close(err_to, err_from);
