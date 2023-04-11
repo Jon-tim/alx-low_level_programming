@@ -24,5 +24,5 @@ int my_atoi(const char *str)
 		num = num * 10 + digit;
 		i++;
 	}
-	return num * sign;
+	return (num * sign);
 }
