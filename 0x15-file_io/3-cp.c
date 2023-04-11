@@ -64,20 +64,18 @@ int main(int argc, char *argv[])
 		read_from = read(file_from, buffer, 1024);
 		if (read_from == -1)
 		{
-			error_checks(file_to, file_from, argv);
+			error_checks(-1, 0, argv);
 		}
 		write_to = write(file_to, buffer, read_from);
 		if (write_to == -1)
 		{
-			error_checks(file_to, file_from, argv);
+			error_checks(0, -1, argv);
 		}
 	}
 	if (file_to == -1)
 	{
 		error_checks(file_to, file_from, argv);
 	}
-	err_from = close(file_from);
-	err_to = close(file_to);
-	error_close(err_to, err_from);
+	error_close(file_to, file_from);
 	return (0);
 }
