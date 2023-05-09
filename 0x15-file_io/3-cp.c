@@ -27,7 +27,7 @@ void error_checks(int file_to, int file_from, char *argv[])
  */
 int main(int argc, char *argv[])
 {
-	int err_exit, file_from, file_to;
+	int file_from, file_to;
 	char buf[1024];
 	ssize_t read_f, write_to;
 
@@ -50,16 +50,17 @@ int main(int argc, char *argv[])
 		}
 		write_to = write(file_to, buf, read_f);
 		if (write_to == -1)
-			error_checks(0, -1, argv);
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[1]);
+			exit(99);
+		}
 	}
-	err_exit = close(file_from);
-	if (err_exit == -1)
+	if (close(file_from) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
 	}
-	err_exit = close(file_to);
-	if (err_exit == -1)
+	if (close(file_to) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to);
 		exit(100);
