@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
 		write_to = write(file_to, buf, read_f);
 		if (write_to == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[1]);
+			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 			exit(99);
 		}
 	}
