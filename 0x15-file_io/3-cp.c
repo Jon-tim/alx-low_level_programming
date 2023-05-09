@@ -44,7 +44,10 @@ int main(int argc, char *argv[])
 	{
 		read_f = read(file_from, buf, 1024);
 		if (read_f == -1)
-			error_checks(-1, 0, argv);
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
 		write_to = write(file_to, buf, read_f);
 		if (write_to == -1)
 			error_checks(0, -1, argv);
