@@ -31,7 +31,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		{
 			new = add_dnodeint_end(h, n);
 		}
-		for (count = 0; count < idx && cur != NULL; count++)
+		for (count = 1; count < idx && cur != NULL; count++)
 		{
 			cur = cur->next;
 			if (cur == NULL)
