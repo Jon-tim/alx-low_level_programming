@@ -1,0 +1,24 @@
+CC: gcc
+SRC: main.c school.c
+OBJ: $(SRC: .c=.o) 
+NAME: school
+RM: rm -f 
+
+all: school
+
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+clean:
+	find . -type f -name "*~" -delete
+	find . -type f -name ".*.swp" -delete
+	$(RM) $(NAME)
+
+oclean:
+	$(RM) -f $(OBJ)
+
+fclean:
+	clean
+	oclean
+
+re: fclean all
