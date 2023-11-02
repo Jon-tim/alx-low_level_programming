@@ -8,9 +8,7 @@ all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:
-	find . -type f -name "*~" -delete
-	find . -type f -name ".*.swp" -delete
-	$(RM) $(NAME)
+	$(RM) *~ $(NAME)
 
 oclean:
 	$(RM) $(OBJ)
