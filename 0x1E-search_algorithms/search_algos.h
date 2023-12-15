@@ -2,6 +2,8 @@
 #define SEARCH
 
 #include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
 
 /**
  * struct listint_s - singly linked list
@@ -36,6 +38,9 @@ size_t index;
 struct skiplist_s *next;
 struct skiplist_s *express;
 } skiplist_t;
+
+/*utilities*/
+int min(int value1, int value2);
 
 /*functions*/
 int linear_search(int *array, size_t size, int value);
